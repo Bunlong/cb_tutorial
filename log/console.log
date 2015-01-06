@@ -1,0 +1,202 @@
+2015-01-06 08:21:34.724 [notice] <0.63.0>@lager_app:132 Deprecated lager_file_backend config detected, please consider updating it
+2015-01-06 08:21:34.836 [info] <0.7.0> Application lager started on node cb_tutorial@bunlong
+2015-01-06 08:21:34.852 [info] <0.7.0> Application crypto started on node cb_tutorial@bunlong
+2015-01-06 08:21:34.880 [info] <0.7.0> Application mimetypes started on node cb_tutorial@bunlong
+2015-01-06 08:21:35.032 [info] <0.95.0> Starting Boss in development mode....
+
+2015-01-06 08:21:35.080 [info] <0.95.0>@boss_db:start:72 Start Database Adapter boss_db_adapter_mock options [{adapter,mock},{cache_enable,false},{cache_prefix,db},{shards,[]},{is_master_node,true},{db_host,"localhost"},{db_port,1978}]
+2015-01-06 08:21:35.280 [info] <0.95.0> Starting master services on cb_tutorial@bunlong
+
+2015-01-06 08:21:35.319 [info] <0.7.0> Application tinymq started on node cb_tutorial@bunlong
+2015-01-06 08:21:35.419 [info] <0.95.0> SSL:[]
+
+2015-01-06 08:21:35.437 [info] <0.95.0> Starting cowboy... on cb_tutorial@bunlong
+
+2015-01-06 08:21:35.464 [info] <0.7.0> Application cowlib started on node cb_tutorial@bunlong
+2015-01-06 08:21:35.497 [info] <0.7.0> Application ranch started on node cb_tutorial@bunlong
+2015-01-06 08:21:35.563 [info] <0.7.0> Application cowboy started on node cb_tutorial@bunlong
+2015-01-06 08:21:35.563 [info] <0.95.0> Starting http listener... on 0.0.0.0:8001 
+
+2015-01-06 08:21:35.786 [info] <0.95.0>@boss_load:load_all_modules:57 Loading application cb_tutorial
+2015-01-06 08:21:35.807 [notice] <0.95.0>@boss_compiler:compile:47 Compile file "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/src/mail/cb_tutorial_outgoing_mail_controller.erl" with options [{out_dir,undefined},{include_dirs,["/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/include"]},{compiler_options,[{parse_transform,lager_transform},return_errors]}] 
+2015-01-06 08:21:35.899 [notice] <0.95.0>@boss_compiler:compile:47 Compile file "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/src/mail/cb_tutorial_incoming_mail_controller.erl" with options [{out_dir,undefined},{include_dirs,["/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/include"]},{compiler_options,[{parse_transform,lager_transform},return_errors]}] 
+2015-01-06 08:21:35.926 [info] <0.95.0>@boss_controller_compiler:compile:59 Compile controller /home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/src/controller/cb_tutorial_greeting_controller.erl
+2015-01-06 08:21:35.927 [notice] <0.95.0>@boss_compiler:compile:47 Compile file "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/src/controller/cb_tutorial_greeting_controller.erl" with options [debug_info,{pre_revert_transform,#Fun<boss_controller_compiler.add_routes_to_forms.1>},{out_dir,undefined},{include_dirs,["/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/include"]},{compiler_options,[{parse_transform,lager_transform},return_errors]}] 
+2015-01-06 08:21:36.001 [notice] <0.95.0>@boss_compiler:compile:47 Compile file "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/src/model/greeting.erl" with options [debug_info,{pre_revert_transform,#Fun<boss_record_compiler.trick_out_forms.2>},{token_transform,#Fun<boss_record_compiler.process_tokens.1>},{out_dir,undefined},{include_dirs,["/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/include"]},{compiler_options,[{parse_transform,lager_transform},return_errors]}] 
+2015-01-06 08:21:36.014 [info] <0.95.0>@boss_record_compiler:process_tokens:120 Tokens [{'-',{1,1}},{atom,{1,2},module},{'(',{1,8}},{atom,{1,9},greeting},{',',{1,17}},{'[',{1,19}},{var,{1,20},'Id'},{',',{1,22}},{var,{1,24},'GreetingText'},{']',{1,36}},{')',{1,37}},{dot,{1,38}},{'-',{2,1}},{atom,{2,2},compile},{'(',{2,9}},{atom,{2,10},export_all},{')',{2,20}},{dot,{2,21}}]
+2015-01-06 08:21:36.015 [notice] <0.95.0>@boss_record_compiler:make_generated_forms:225 Module "greeting" Parameters ['Id','GreetingText'] Attributes[{compile,export_all}]
+2015-01-06 08:21:36.092 [notice] <0.95.0>@boss_compiler:compile:47 Compile file "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/src/view/lib/tag_modules/cb_tutorial_custom_tags.erl" with options [{out_dir,undefined},{include_dirs,["/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/include"]},{compiler_options,[{parse_transform,lager_transform},return_errors]}] 
+2015-01-06 08:21:36.116 [notice] <0.95.0>@boss_compiler:compile:47 Compile file "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/src/view/lib/filter_modules/cb_tutorial_custom_filters.erl" with options [{out_dir,undefined},{include_dirs,["/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/include"]},{compiler_options,[{parse_transform,lager_transform},return_errors]}] 
+2015-01-06 08:21:36.120 [info] <0.95.0>@boss_load:compile_view_dir_erlydtl:311 Compile Modules "src/view/lib/tag_html"  cb_tutorial_view_lib_tags
+2015-01-06 08:21:36.552 [notice] <0.95.0>@boss_compiler:compile:47 Compile file "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/init/cb_tutorial_01_news.erl" with options [{include_dirs,["/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/include"]}] 
+2015-01-06 08:21:41.805 [notice] <0.277.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:21:41.810 [warning] <0.6.0> lager_error_logger_h dropped 33 messages in the last second that exceeded the limit of 50 messages/sec
+2015-01-06 08:21:41.810 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 08:21:41.852 [notice] <0.277.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-06 08:21:41.852 [notice] <0.277.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 08:21:41.902 [info] <0.277.0> GET /greeting/list [cb_tutorial] 200 0ms
+2015-01-06 08:35:24.543 [notice] <0.280.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:35:24.544 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 08:35:24.561 [notice] <0.280.0>@boss_compiler:compile:47 Compile file "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/src/model/greeting.erl" with options [debug_info,{pre_revert_transform,#Fun<boss_record_compiler.trick_out_forms.2>},{token_transform,#Fun<boss_record_compiler.process_tokens.1>},{out_dir,undefined},{include_dirs,["/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/include"]},{compiler_options,[{parse_transform,lager_transform},return_errors]}] 
+2015-01-06 08:35:24.562 [info] <0.280.0>@boss_record_compiler:process_tokens:120 Tokens [{'-',{1,1}},{atom,{1,2},module},{'(',{1,8}},{atom,{1,9},greeting},{',',{1,17}},{'[',{1,19}},{var,{1,20},'Id'},{',',{1,22}},{var,{1,24},'GreetingText'},{']',{1,36}},{')',{1,37}},{dot,{1,38}},{'-',{2,1}},{atom,{2,2},compile},{'(',{2,9}},{atom,{2,10},export_all},{')',{2,20}},{dot,{2,21}},{atom,{4,1},validation_tests},{'(',{4,17}},{')',{4,18}},{'->',{4,20}},{'[',{5,3}},{'{',{5,4}},{fun,{5,5}},{'(',{5,8}},{')',{5,9}},{'->',{5,11}},{atom,{5,14},length},{'(',{5,20}},{var,{5,21},'GreetingText'},{')',{5,33}},{'>',{5,35}},{integer,{5,37},0},{end,{5,39}},{',',{5,42}},{string,{5,44},"Greeting must be non-empty!"},{'}',{5,73}},{',',{5,74}},{'{',{6,4}},{fun,{6,5}},{'(',{6,8}},{')',{6,9}},{'->',{6,11}},{atom,{6,14},length},{'(',{6,20}},{var,{6,21},'GreetingText'},{')',{6,33}},{'=<',{6,35}},{integer,{6,38},140},{end,{6,42}},{',',{6,45}},{string,{6,47},"Greeting must be tweetable"},{'}',{6,75}},{']',{6,76}},{dot,{6,77}},{eof,{7,1}}]
+2015-01-06 08:35:24.563 [notice] <0.280.0>@boss_record_compiler:make_generated_forms:225 Module "greeting" Parameters ['Id','GreetingText'] Attributes[{compile,export_all}]
+2015-01-06 08:35:24.597 [notice] <0.280.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-06 08:35:24.597 [notice] <0.280.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 08:35:24.619 [info] <0.280.0> GET /greeting/list [cb_tutorial] 200 0ms
+2015-01-06 08:35:25.050 [notice] <0.281.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:35:27.530 [notice] <0.284.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:35:27.531 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 08:35:27.535 [notice] <0.284.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-06 08:35:27.535 [notice] <0.284.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 08:35:27.540 [info] <0.284.0> GET /greeting/create [cb_tutorial] 200 0ms
+2015-01-06 08:35:29.086 [notice] <0.286.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:35:29.087 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 08:35:29.092 [notice] <0.286.0>@boss_controller_adapter_pmod:action:91 Request Method 'POST'
+2015-01-06 08:35:29.092 [notice] <0.286.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 08:35:29.092 [error] <0.286.0>@boss_web_controller:call_controller_action:366 Error in controller error {badmatch,{error,["Greeting must be non-empty!"]}} [{cb_tutorial_greeting_controller,create,3,[{file,"/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/src/controller/cb_tutorial_greeting_controller.erl"},{line,17}]},{boss_web_controller,call_controller_action,3,[{file,"src/boss/boss_web_controller.erl"},{line,363}]},{boss_web_controller,apply_action,4,[{file,"src/boss/boss_web_controller.erl"},{line,355}]},{boss_web_controller,execute_action_inner,9,[{file,"src/boss/boss_web_controller.erl"},{line,334}]},{boss_web_controller_handle_request,process_dynamic_request,4,[{file,"src/boss/boss_web_controller_handle_request.erl"},{line,242}]},{boss_web_controller_handle_request,process_request,4,[{file,"src/boss/boss_web_controller_handle_request.erl"},{line,228}]},{boss_web_controller_handle_request,set_timer,7,[{file,"src/boss/boss_web_controller_handle_request.erl"},{line,148}]},{boss_web_controller_handle_request,build_dynamic_response,4,[{file,"src/boss/boss_web_controller_handle_request.erl"},{line,122}]}]
+2015-01-06 08:35:29.093 [info] <0.286.0> POST /greeting/create [cb_tutorial] 200 0ms
+2015-01-06 08:35:53.033 [notice] <0.288.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:35:53.035 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 08:35:53.038 [notice] <0.288.0>@boss_compiler:compile:47 Compile file "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/src/model/greeting.erl" with options [debug_info,{pre_revert_transform,#Fun<boss_record_compiler.trick_out_forms.2>},{token_transform,#Fun<boss_record_compiler.process_tokens.1>},{out_dir,undefined},{include_dirs,["/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/include"]},{compiler_options,[{parse_transform,lager_transform},return_errors]}] 
+2015-01-06 08:35:53.039 [info] <0.288.0>@boss_record_compiler:process_tokens:120 Tokens [{'-',{1,1}},{atom,{1,2},module},{'(',{1,8}},{atom,{1,9},greeting},{',',{1,17}},{'[',{1,19}},{var,{1,20},'Id'},{',',{1,22}},{var,{1,24},'GreetingText'},{']',{1,36}},{')',{1,37}},{dot,{1,38}},{'-',{2,1}},{atom,{2,2},compile},{'(',{2,9}},{atom,{2,10},export_all},{')',{2,20}},{dot,{2,21}},{eof,{7,1}}]
+2015-01-06 08:35:53.039 [notice] <0.288.0>@boss_record_compiler:make_generated_forms:225 Module "greeting" Parameters ['Id','GreetingText'] Attributes[{compile,export_all}]
+2015-01-06 08:35:53.061 [notice] <0.288.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-06 08:35:53.061 [notice] <0.288.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 08:35:53.066 [info] <0.288.0> GET /greeting/create [cb_tutorial] 200 0ms
+2015-01-06 08:35:54.546 [notice] <0.289.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:35:54.548 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 08:35:54.551 [notice] <0.289.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-06 08:35:54.551 [notice] <0.289.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 08:35:54.553 [info] <0.289.0> GET /greeting/create [cb_tutorial] 200 0ms
+2015-01-06 08:35:54.853 [notice] <0.292.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:35:56.405 [notice] <0.294.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:35:56.406 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 08:35:56.412 [notice] <0.294.0>@boss_controller_adapter_pmod:action:91 Request Method 'POST'
+2015-01-06 08:35:56.412 [notice] <0.294.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 08:35:56.456 [info] <0.294.0> POST /greeting/create [cb_tutorial] 302 0ms
+2015-01-06 08:35:56.464 [notice] <0.296.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:35:56.465 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 08:35:56.471 [notice] <0.296.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-06 08:35:56.471 [notice] <0.296.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 08:35:56.474 [info] <0.296.0> GET /greeting/list [cb_tutorial] 200 0ms
+2015-01-06 08:36:00.306 [notice] <0.298.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:36:00.306 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 08:36:00.309 [notice] <0.298.0>@boss_controller_adapter_pmod:action:91 Request Method 'POST'
+2015-01-06 08:36:00.309 [notice] <0.298.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 08:36:00.312 [info] <0.298.0> POST /greeting/goodbye [cb_tutorial] 302 0ms
+2015-01-06 08:36:00.317 [notice] <0.300.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:36:00.318 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 08:36:00.324 [notice] <0.300.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-06 08:36:00.324 [notice] <0.300.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 08:36:00.328 [info] <0.300.0> GET /greeting/list [cb_tutorial] 200 0ms
+2015-01-06 08:50:49.280 [notice] <0.302.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:50:49.282 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 08:50:49.292 [info] <0.302.0>@boss_controller_compiler:compile:59 Compile controller /home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/src/controller/cb_tutorial_greeting_controller.erl
+2015-01-06 08:50:49.292 [notice] <0.302.0>@boss_compiler:compile:47 Compile file "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/src/controller/cb_tutorial_greeting_controller.erl" with options [debug_info,{pre_revert_transform,#Fun<boss_controller_compiler.add_routes_to_forms.1>},{out_dir,undefined},{include_dirs,["/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/include"]},{compiler_options,[{parse_transform,lager_transform},return_errors]}] 
+2015-01-06 08:50:49.304 [notice] <0.302.0>@boss_compiler:compile:47 Compile file "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/src/model/greeting.erl" with options [debug_info,{pre_revert_transform,#Fun<boss_record_compiler.trick_out_forms.2>},{token_transform,#Fun<boss_record_compiler.process_tokens.1>},{out_dir,undefined},{include_dirs,["/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/include"]},{compiler_options,[{parse_transform,lager_transform},return_errors]}] 
+2015-01-06 08:50:49.306 [info] <0.302.0>@boss_record_compiler:process_tokens:120 Tokens [{'-',{1,1}},{atom,{1,2},module},{'(',{1,8}},{atom,{1,9},greeting},{',',{1,17}},{'[',{1,19}},{var,{1,20},'Id'},{',',{1,22}},{var,{1,24},'GreetingText'},{']',{1,36}},{')',{1,37}},{dot,{1,38}},{'-',{2,1}},{atom,{2,2},compile},{'(',{2,9}},{atom,{2,10},export_all},{')',{2,20}},{dot,{2,21}},{atom,{4,1},validation_tests},{'(',{4,17}},{')',{4,18}},{'->',{4,20}},{'[',{5,3}},{'{',{5,4}},{fun,{5,5}},{'(',{5,8}},{')',{5,9}},{'->',{5,11}},{atom,{5,14},length},{'(',{5,20}},{var,{5,21},'GreetingText'},{')',{5,33}},{'>',{5,35}},{integer,{5,37},0},{end,{5,39}},{',',{5,42}},{string,{5,44},"Greeting must be non-empty!"},{'}',{5,73}},{',',{5,74}},{'{',{6,4}},{fun,{6,5}},{'(',{6,8}},{')',{6,9}},{'->',{6,11}},{atom,{6,14},length},{'(',{6,20}},{var,{6,21},'GreetingText'},{')',{6,33}},{'=<',{6,35}},{integer,{6,38},140},{end,{6,42}},{',',{6,45}},{string,{6,47},"Greeting must be tweetable"},{'}',{6,75}},{']',{6,76}},{dot,{6,77}},{eof,{7,1}}]
+2015-01-06 08:50:49.306 [notice] <0.302.0>@boss_record_compiler:make_generated_forms:225 Module "greeting" Parameters ['Id','GreetingText'] Attributes[{compile,export_all}]
+2015-01-06 08:50:49.327 [notice] <0.302.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-06 08:50:49.327 [notice] <0.302.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 08:50:49.329 [info] <0.302.0> GET /greeting/list [cb_tutorial] 200 0ms
+2015-01-06 08:50:52.093 [notice] <0.303.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:50:52.094 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 08:50:52.098 [notice] <0.303.0>@boss_controller_adapter_pmod:action:91 Request Method 'POST'
+2015-01-06 08:50:52.098 [notice] <0.303.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 08:50:52.098 [error] <0.104.0> gen_server <0.104.0> terminated with reason: no function clause matching boss_db_controller:infer_type_from_id(undefined) line 418
+2015-01-06 08:50:52.098 [error] <0.104.0> CRASH REPORT Process <0.104.0> with 0 neighbours exited with reason: no function clause matching boss_db_controller:infer_type_from_id(undefined) line 418 in gen_server:terminate/7 line 804
+2015-01-06 08:50:52.098 [error] <0.100.0> Supervisor {<0.100.0>,poolboy_sup} had child boss_db_controller started with {boss_db_controller,start_link,undefined} at <0.104.0> exit with reason no function clause matching boss_db_controller:infer_type_from_id(undefined) line 418 in context child_terminated
+2015-01-06 08:50:52.098 [error] <0.303.0>@boss_web_controller:call_controller_action:366 Error in controller exit {{function_clause,[{boss_db_controller,infer_type_from_id,[undefined],[{file,"src/boss_db_controller.erl"},{line,418}]},{boss_db_controller,db_for_key,2,[{file,"src/boss_db_controller.erl"},{line,405}]},{boss_db_controller,handle_call,3,[{file,"src/boss_db_controller.erl"},{line,153}]},{gen_server,try_handle_call,4,[{file,"gen_server.erl"},{line,607}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,639}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,237}]}]},{gen_server,call,[<0.104.0>,{delete,undefined},30000]}} [{gen_server,call,3,[{file,"gen_server.erl"},{line,190}]},{boss_pool,call,3,[{file,"src/boss_pool.erl"},{line,12}]},{boss_db,delete,2,[{file,"src/boss_db.erl"},{line,286}]},{cb_tutorial_greeting_controller,goodbye,3,[{file,"/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/src/controller/cb_tutorial_greeting_controller.erl"},{line,24}]},{boss_web_controller,call_controller_action,3,[{file,"src/boss/boss_web_controller.erl"},{line,363}]},{boss_web_controller,apply_action,4,[{file,"src/boss/boss_web_controller.erl"},{line,355}]},{boss_web_controller,execute_action_inner,9,[{file,"src/boss/boss_web_controller.erl"},{line,334}]},{boss_web_controller_handle_request,process_dynamic_request,4,[{file,"src/boss/boss_web_controller_handle_request.erl"},{line,242}]}]
+2015-01-06 08:50:52.100 [info] <0.303.0> POST /greeting/goodbye [cb_tutorial] 200 0ms
+2015-01-06 08:50:54.082 [notice] <0.309.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:50:54.084 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 08:50:54.093 [notice] <0.309.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-06 08:50:54.093 [notice] <0.309.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 08:50:54.097 [info] <0.309.0> GET /greeting/list [cb_tutorial] 200 0ms
+2015-01-06 08:50:55.853 [notice] <0.310.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:50:55.854 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 08:50:55.861 [notice] <0.310.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-06 08:50:55.861 [notice] <0.310.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 08:50:55.864 [info] <0.310.0> GET /greeting/create [cb_tutorial] 200 0ms
+2015-01-06 08:50:57.464 [notice] <0.313.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:50:57.465 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 08:50:57.474 [notice] <0.313.0>@boss_controller_adapter_pmod:action:91 Request Method 'POST'
+2015-01-06 08:50:57.474 [notice] <0.313.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 08:50:57.478 [info] <0.313.0> POST /greeting/create [cb_tutorial] 200 0ms
+2015-01-06 08:50:58.890 [notice] <0.315.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:50:58.891 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 08:50:58.897 [notice] <0.315.0>@boss_controller_adapter_pmod:action:91 Request Method 'POST'
+2015-01-06 08:50:58.897 [notice] <0.315.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 08:50:58.902 [info] <0.315.0> POST /greeting/create [cb_tutorial] 200 0ms
+2015-01-06 08:50:59.647 [notice] <0.317.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:50:59.648 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 08:50:59.652 [notice] <0.317.0>@boss_controller_adapter_pmod:action:91 Request Method 'POST'
+2015-01-06 08:50:59.652 [notice] <0.317.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 08:50:59.656 [info] <0.317.0> POST /greeting/create [cb_tutorial] 200 0ms
+2015-01-06 08:51:48.705 [notice] <0.319.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:51:48.706 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 08:51:48.711 [info] <0.319.0>@boss_controller_compiler:compile:59 Compile controller /home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/src/controller/cb_tutorial_greeting_controller.erl
+2015-01-06 08:51:48.712 [notice] <0.319.0>@boss_compiler:compile:47 Compile file "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/src/controller/cb_tutorial_greeting_controller.erl" with options [debug_info,{pre_revert_transform,#Fun<boss_controller_compiler.add_routes_to_forms.1>},{out_dir,undefined},{include_dirs,["/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/include"]},{compiler_options,[{parse_transform,lager_transform},return_errors]}] 
+2015-01-06 08:51:48.726 [notice] <0.319.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-06 08:51:48.726 [notice] <0.319.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 08:51:48.728 [info] <0.319.0> GET /greeting/create [cb_tutorial] 200 0ms
+2015-01-06 08:51:50.691 [notice] <0.320.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:51:50.692 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 08:51:50.696 [notice] <0.320.0>@boss_controller_adapter_pmod:action:91 Request Method 'POST'
+2015-01-06 08:51:50.696 [notice] <0.320.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 08:51:50.696 [error] <0.320.0>@boss_web_controller:call_controller_action:366 Error in controller error {badmatch,{error,["Greeting must be non-empty!"]}} [{cb_tutorial_greeting_controller,create,3,[{file,"/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/src/controller/cb_tutorial_greeting_controller.erl"},{line,17}]},{boss_web_controller,call_controller_action,3,[{file,"src/boss/boss_web_controller.erl"},{line,363}]},{boss_web_controller,apply_action,4,[{file,"src/boss/boss_web_controller.erl"},{line,355}]},{boss_web_controller,execute_action_inner,9,[{file,"src/boss/boss_web_controller.erl"},{line,334}]},{boss_web_controller_handle_request,process_dynamic_request,4,[{file,"src/boss/boss_web_controller_handle_request.erl"},{line,242}]},{boss_web_controller_handle_request,process_request,4,[{file,"src/boss/boss_web_controller_handle_request.erl"},{line,228}]},{boss_web_controller_handle_request,set_timer,7,[{file,"src/boss/boss_web_controller_handle_request.erl"},{line,148}]},{boss_web_controller_handle_request,build_dynamic_response,4,[{file,"src/boss/boss_web_controller_handle_request.erl"},{line,122}]}]
+2015-01-06 08:51:50.697 [info] <0.320.0> POST /greeting/create [cb_tutorial] 200 0ms
+2015-01-06 08:51:53.031 [notice] <0.324.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:51:53.032 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 08:51:53.037 [notice] <0.324.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-06 08:51:53.037 [notice] <0.324.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 08:51:53.039 [info] <0.324.0> GET /greeting/create [cb_tutorial] 200 0ms
+2015-01-06 08:53:16.342 [notice] <0.327.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:53:16.343 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 08:53:16.347 [info] <0.327.0>@boss_controller_compiler:compile:59 Compile controller /home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/src/controller/cb_tutorial_greeting_controller.erl
+2015-01-06 08:53:16.347 [notice] <0.327.0>@boss_compiler:compile:47 Compile file "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/src/controller/cb_tutorial_greeting_controller.erl" with options [debug_info,{pre_revert_transform,#Fun<boss_controller_compiler.add_routes_to_forms.1>},{out_dir,undefined},{include_dirs,["/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/include"]},{compiler_options,[{parse_transform,lager_transform},return_errors]}] 
+2015-01-06 08:53:16.362 [notice] <0.327.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-06 08:53:16.362 [notice] <0.327.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 08:53:16.367 [info] <0.327.0> GET /greeting/create [cb_tutorial] 200 0ms
+2015-01-06 08:53:17.896 [notice] <0.328.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:53:17.897 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 08:53:17.901 [notice] <0.328.0>@boss_controller_adapter_pmod:action:91 Request Method 'POST'
+2015-01-06 08:53:17.901 [notice] <0.328.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 08:53:17.905 [info] <0.328.0> POST /greeting/create [cb_tutorial] 200 0ms
+2015-01-06 08:53:19.039 [notice] <0.332.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:53:19.040 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 08:53:19.046 [notice] <0.332.0>@boss_controller_adapter_pmod:action:91 Request Method 'POST'
+2015-01-06 08:53:19.047 [notice] <0.332.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 08:53:19.050 [info] <0.332.0> POST /greeting/create [cb_tutorial] 200 0ms
+2015-01-06 08:53:19.783 [notice] <0.334.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 08:53:19.784 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 08:53:19.789 [notice] <0.334.0>@boss_controller_adapter_pmod:action:91 Request Method 'POST'
+2015-01-06 08:53:19.789 [notice] <0.334.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 08:53:19.794 [info] <0.334.0> POST /greeting/create [cb_tutorial] 200 0ms
+2015-01-06 09:09:09.493 [notice] <0.336.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 09:09:09.495 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 09:09:09.498 [info] <0.336.0>@boss_controller_compiler:compile:59 Compile controller /home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/src/controller/cb_tutorial_greeting_controller.erl
+2015-01-06 09:09:09.499 [notice] <0.336.0>@boss_compiler:compile:47 Compile file "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/src/controller/cb_tutorial_greeting_controller.erl" with options [debug_info,{pre_revert_transform,#Fun<boss_controller_compiler.add_routes_to_forms.1>},{out_dir,undefined},{include_dirs,["/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/include"]},{compiler_options,[{parse_transform,lager_transform},return_errors]}] 
+2015-01-06 09:09:09.514 [notice] <0.336.0>@boss_controller_adapter_pmod:action:91 Request Method 'POST'
+2015-01-06 09:09:09.514 [notice] <0.336.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 09:09:09.517 [info] <0.336.0> POST /greeting/create [cb_tutorial] 302 0ms
+2015-01-06 09:09:09.522 [notice] <0.339.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 09:09:09.524 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 09:09:09.534 [notice] <0.339.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-06 09:09:09.534 [notice] <0.339.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 09:09:09.539 [info] <0.339.0> GET /greeting/list [cb_tutorial] 200 0ms
+2015-01-06 09:09:12.113 [notice] <0.341.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 09:09:12.114 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 09:09:12.117 [notice] <0.341.0>@boss_controller_adapter_pmod:action:91 Request Method 'POST'
+2015-01-06 09:09:12.117 [notice] <0.341.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 09:09:12.119 [info] <0.341.0> POST /greeting/goodbye [cb_tutorial] 302 0ms
+2015-01-06 09:09:12.124 [notice] <0.343.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 09:09:12.125 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 09:09:12.129 [notice] <0.343.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-06 09:09:12.129 [notice] <0.343.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 09:09:12.134 [info] <0.343.0> GET /greeting/list [cb_tutorial] 200 0ms
+2015-01-06 09:09:13.734 [notice] <0.345.0>@boss_web_controller_handle_request:handle_request:23 ApplicationForPath cb_tutorial
+2015-01-06 09:09:13.735 [info] <0.262.0> Loading routes from "/home/bunlong/workspace/my_project/geekhmerlab/chicagoboss/cb_tutorial/priv/cb_tutorial.routes" ....
+2015-01-06 09:09:13.739 [notice] <0.345.0>@boss_controller_adapter_pmod:action:91 Request Method 'GET'
+2015-01-06 09:09:13.739 [notice] <0.345.0>@boss_controller_adapter_pmod:action:92 Tokens []
+2015-01-06 09:09:13.742 [info] <0.345.0> GET /greeting/create [cb_tutorial] 200 0ms

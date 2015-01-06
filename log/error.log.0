@@ -1,0 +1,5 @@
+2015-01-05 10:11:40.250 [error] <0.272.0> GET / [cb_tutorial] 404 0ms
+2015-01-05 10:17:55.118 [error] <0.275.0> GET / [cb_tutorial] 404 0ms
+2015-01-05 10:18:07.489 [error] <0.278.0> GET /greeting/hello. [cb_tutorial] 404 0ms
+2015-01-05 21:38:59.652 [error] <0.273.0> GET / [cb_tutorial] 404 0ms
+2015-01-05 22:27:08.556 [error] <0.313.0> GET /greeting/create [cb_tutorial] 404 0ms

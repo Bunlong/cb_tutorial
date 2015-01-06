@@ -1,0 +1,112 @@
+1. make app PROJECT=cb_tutorial
+2. cd ../cb_tutorial
+3. ./init-dev.sh
+4. Create src/controller/cb_tutorial_greeting_controller.erl
+    -module(cb_tutorial_greeting_controller, [Req]).
+    -compile(export_all).
+
+    hello('GET', []) ->
+    {output, "Hello, world!"}.
+5. Point web browser to http://localhost:8001/greeting/hello
+6. The HTTP method that initiated the request: 'GET', 'POST', 'PUT', or 'DELETE'.
+7. Controllers can return three types of tuples:
+    - {output, Value} - Send Value as raw HTML
+    - {json, Values} - Format Values (a proplist) as JSON
+    - {ok, Values} - Pass Values (a proplist) to the associated template
+8. Open a new file called src/model/greeting.erl
+    -module(greeting, [Id, GreetingText]).
+    -compile(export_all).
+9. > Greeting = greeting:new(id, "Hello, world!").
+   {greeting,id,"Hello, world!"}
+10. > Greeting:greeting_text().
+    "Hello, world!"
+11. > Greeting:attributes().
+    [{id,id},{greeting_text,"Hello, world!"}]
+12. > Greeting:attribute_names().
+    [id,greeting_text]
+13. > Greeting:set(greeting_text, "Good-bye, world!").
+    {greeting,id,"Good-bye, world!"}
+14. > Greeting.
+    {greeting,id,"Hello, world!"}
+15. > Greeting:save().
+    {ok,{greeting,"greeting-1","Hello, world!"}}
+16. > boss_db:find(greeting, []).
+    [{greeting,"greeting-1","Hello, world!"}]
+17. > boss_db:find(greeting, [{id, 'equals', "greeting-1"}]).
+    > boss_db:find(greeting, [{greeting_text, 'matches', "^Hell"}]).
+    > boss_db:find(greeting, [{greeting_text, 'gt', "Hellespont"}]).
+    > boss_db:find(greeting, [{greeting_text, 'lt', "Hellespont"}]).
+    > boss_db:find("greeting-1").
+    {greeting,"greeting-1","Hello, world!"}
+18. Open up a new template src/view/greeting/list.html
+    <html>
+      <head>
+        <title>{% block title %}Greetings!{% endblock %}</title>
+      </head>
+      <body>
+        {% block body %}
+          <ul>
+          {% if greetings %}
+            {% for greeting in greetings %}
+              <li>{{ greeting.greeting_text }}
+            {% endfor %}
+          {% else %}
+            <li>No greetings!
+          {% endif %}
+          </ul>
+        {% endblock %}
+      </body>
+    </html>
+19. Point web browser to http://localhost:8001/greeting/list
+20. Open the controller src/controller/cb_tutorial_greeting_controller.erl
+    list('GET', []) ->
+      Greetings = boss_db:find(greeting, []),
+      {ok, [{greetings, Greetings}]}.
+21. Add this to the bottom of the body block of src/view/greeting/list.html
+    <p><a href="{% url action="create" %}">New greeting...</a></p>
+22. Then create a new template, src/view/greeting/create.html:
+    {% extends "greeting/list.html" %}
+    {% block title %}A new greeting!{% endblock %}
+    {% block body %}
+      <form method="post">
+        Enter a new greeting:
+        <textarea name="greeting_text"></textarea>
+        <input type="submit">
+      </form>
+    {% endblock %}
+23. Add a create action to the controller
+  create('GET', []) ->
+    ok;
+
+  create('POST', []) ->
+    GreetingText = Req:post_param("greeting_text"),
+    NewGreeting = greeting:new(id, GreetingText),
+    {ok, SavedGreeting} = NewGreeting:save(),
+    {redirect, [{action, "list"}]}.
+24. Add the following form to the bottom of the body block of the list template (src/view/greeting/list.html)
+    <form method="post" action="{% url action="goodbye" %}">
+      Delete:<select name="greeting_id">
+        {% for greeting in greetings %}
+          <option value="{{ greeting.id }}">{{ greeting.greeting_text }}
+        {% endfor %}
+      </select>
+      <input type="submit">
+    </form>
+25. We need to process the form so that it works. Add the following code to the bottom of the controller (src/controller/cb_tutorial_greeting_controller.erl)
+    goodbye('POST', []) ->
+      boss_db:delete(Req:post_param("greeting_id")),
+      {redirect, [{action, "list"}]}.
+26. To ensure that greetings are non-empty and tweetable, add the ollowing code to the greeting model (src/model/greeting.erl)
+    validation_tests() ->
+      [{fun() -> length(GreetingText) > 0 end,
+        "Greeting must be non-empty!"}, {fun() -> length(GreetingText) =< 140 end, "Greeting must be tweetable"}].
+27. We'll modify this part of the controller to match potential validation errors, and present them to the user in the template. Modify the controller accordingly:
+    create('POST', []) ->
+      GreetingText = Req:post_param("greeting_text"),
+      NewGreeting = greeting:new(id, GreetingText),
+      case NewGreeting:save() of
+        {ok, SavedGreeting} ->
+          {redirect, [{action, "list"}]};
+        {error, ErrorList} ->
+          {ok, [{errors, ErrorList}, {new_msg, NewGreeting}]}
+      end.
