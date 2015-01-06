@@ -110,3 +110,43 @@
         {error, ErrorList} ->
           {ok, [{errors, ErrorList}, {new_msg, NewGreeting}]}
       end.
+28. Now add an error clause at the the top of the body block in the view (src/view/greeting/create.html) to show any errors in red:
+  {% if errors %}
+    <ul>
+      {% for error in errors %}
+        <li><font color=red>{{ error }}</font>
+      {% endfor %}
+    </ul>
+  {% endif %}
+  <form method="post">
+    Enter a new greeting:
+    <textarea name="greeting_text">{% if new_msg %}
+    {{ new_msg.greeting_text }}{% endif %}</textarea>
+    <input type="submit">
+  </form>
+29. Save hooks can execute a callback before or after a record is created, updated, or deleted. But save hooks can also be used to modify a record before it is actually saved, or to abort the pending save operation after it has passed validation. Open src/model/greeting.erl, and add this function:
+    before_create() ->
+      ModifiedRecord = set(greeting_text, 
+                           re:replace(GreetingText, 
+                                      "masticate", "chew",
+                                      [{return, list}])),
+      {ok, ModifiedRecord}.
+
+30. The two most important functions in the BossMQ API are:
+    - boss_mq:push/2 (i.e., publish)
+    - boss_mq:pull/2 (i.e., subscribe)
+    - push is non-blocking, but pull may block until a message is available on the channel. A non-blocking version of pull is also available; it is called poll.
+31. To get a feel for the BossMQ API, try this in the server shell:
+    > boss_mq:push("test-channel", "Who's there??").
+    That pushes a message onto the channel named “test-channel”. The channel names can be any valid string.
+31. Now we can perform a pull to receive the message that we just sent. Try this:
+    > boss_mq:pull("test-channel").
+32. Once you are satisfied that messages aren't being deleted upon receipt, try this:
+    > boss_mq:pull("test-channel", now).
+33. Open src/controller/cb_tutorial_greeting_controller.erl, and add a
+new action:
+    send_test_message('GET', []) ->
+      TestMessage = "Free at last!",
+      boss_mq:push("test-channel", TestMessage),
+      {output, TestMessage}.
+    Point your browser to http://localhost:8001/greeting/send_test_message.
