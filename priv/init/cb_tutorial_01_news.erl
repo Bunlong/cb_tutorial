@@ -7,11 +7,11 @@
 % function below (stop is executed if the script is ever reloaded).
 init() ->
     {ok, WatchId} = boss_news:watch("greetings",
-    fun(created, NewGreeting) ->
-      boss_mq:push("new-greetings", NewGreeting);
-      (deleted, OldGreeting) ->
-        boss_mq:push("old-greetings", OldGreeting)
-    end),
+                      fun(created, NewGreeting) ->
+                        boss_mq:push("new-greetings", NewGreeting);
+                        (deleted, OldGreeting) ->
+                          boss_mq:push("old-greetings", OldGreeting)
+                      end),
     {ok, [WatchId]}.
 
 stop(ListOfWatchIDs) ->
